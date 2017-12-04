@@ -35,7 +35,9 @@ module.exports = {
         loaders: [
           require.resolve('react-hot-loader'),
           require.resolve('babel-loader'),
+          'babel-loader?presets[]=es2015&presets[]=react'
         ],
+        
       },
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.svg$/, loader: 'file-loader' },
