@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maksymyr/"
+    "url": "git+https://github.com/pereZZZ/"
   },
-  "author": "Maksym Popov",
+  "author": "Romanenko Viktor",
   "license": "MIT",
   "dependencies": {
     "babel": "^6.23.0",
