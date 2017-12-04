@@ -1,1 +1,0 @@
-mongodb://perezzz:qwaszx12qwaszx@ds129936.mlab.com:29936/chat
