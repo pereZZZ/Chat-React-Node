@@ -16,6 +16,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express-session": "^1.15.6",
+    "jquery": "^3.2.1",
     "passport": "^0.4.0",
     "react": "15.3.1",
     "react-dom": "15.3.1",
@@ -23,7 +24,8 @@
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",
     "redux": "3.7.2",
-    "sessions": "0.0.2-7"
+    "sessions": "0.0.2-7",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.2",
