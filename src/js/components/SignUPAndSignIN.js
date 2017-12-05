@@ -19,8 +19,10 @@ export default class SignUPAndSignIN extends Component {
     }
    
     SignINorSignUP = () => {
-        console.log(this.props.location.pathname);
-        // if(this.props.location.pathname=='/'){
+        // console.log(this.props.location.pathname);
+        if(this.props.location.pathname=='/'){
+            return this.props.history.push("/signin");
+        }
         //     this.props.history.push("/chat");
         // }else{
             // this.props.history.push("/signin");
