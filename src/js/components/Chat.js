@@ -38,8 +38,9 @@ export default class Chat extends Component {
         return (
         <div>
             <Header />
-            <div className="App">
+            <div className="main-chat-wrapper">
             <SelectRooms />
+            <div className="App">
                 <div id="Allmsg">
                     {this.state.msgs.map((item, index)=>{
                         return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
@@ -51,6 +52,8 @@ export default class Chat extends Component {
                     <Input/>
                 </div>
                 </div>
+                </div>
+
             </div>
         )
     }
