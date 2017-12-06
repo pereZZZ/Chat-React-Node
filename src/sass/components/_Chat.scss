@@ -1,8 +1,17 @@
 * { 
     margin: 0; padding: 0; box-sizing: border-box; 
 }
-body { 
-    font: 13px Helvetica, Arial; 
+body {
+    font: 13px 'Roboto', sans-serif;
+    //font: 13px Helvetica, Arial;
+}
+.main-wrapper{
+    width: 100%;
+    background: #121d2c;
+    .centered{
+        width: 996px;
+        margin: 0 auto;
+    }
 }
 form {
     background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; 
