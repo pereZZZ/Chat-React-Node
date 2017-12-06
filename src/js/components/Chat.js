@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import Header from '../components/Header';
 import {bindActionCreators} from 'redux';
 import {Route, Link} from 'react-router-dom';
 import {objmsg} from '../actions';
@@ -34,6 +35,8 @@ export default class Chat extends Component {
 
     render() {
         return (
+        <div>
+            <Header />
             <div className="App">
                 <div id="Allmsg">
                     {this.state.msgs.map((item, index)=>{
@@ -44,6 +47,7 @@ export default class Chat extends Component {
                 </div>
                 <div className="type">
                     <Input/>
+                </div>
                 </div>
             </div>
         )
