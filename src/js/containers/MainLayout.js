@@ -18,10 +18,7 @@ export default class MainLayout extends React.Component {
             //         </div>
             //     </div>
             <div>
-                <Route path="/" component={SignUPAndSignIN}/> 
-                <Route path="/signup" component={SignUp}/> 
-                <Route path="/signin" component={SignIn}/>
-                <Route path="/chat" component={Chat}/>
+                <Route exact path="/chat" component={Chat}/>
             </div>
             
             //     <div className="row">
