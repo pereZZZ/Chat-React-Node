@@ -7,7 +7,7 @@ body {
 }
 .main-wrapper{
     width: 100%;
-    background: #121d2c;
+    // background: #121d2c;
     .centered{
         width: 996px;
         margin: 0 auto;
@@ -30,4 +30,47 @@ form button {
 }
 #messages li:nth-child(odd) { 
     background: #eee; 
+}
+.App{
+    width: 743px;
+    height: 772px;
+    background: #f5f5f6;
+    border:1px #b7b7b7;
+
+    .OneMsg{
+        width: 80%;
+        height: 80%;
+    }
+    .LogoUser{
+        width: 50px;
+        height: 50px;
+        border: 1px solid;
+        border-radius: 50%;
+        float: left;
+    }
+    .Msg{
+        width: 80%;
+        height: 80%;
+        background: #ffffff;
+        float: left;
+        margin-left:10px;
+
+        p {
+            color: #b7b7b7;
+        }
+        .UserName, .Data, .Text{
+            color: #202b52;
+        }
+    }
+
+    .type{
+        display: block;
+        position: absolute;
+        top:90%;
+        
+        input{
+            width: 727px;
+            height: 50px;
+        }
+    }
 }
