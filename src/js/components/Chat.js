@@ -6,6 +6,7 @@ import {Route, Link} from 'react-router-dom';
 import {objmsg} from '../actions';
 import io from 'socket.io-client';
 import Input from './Input';
+import SelectRooms from "../components/SelectRooms"
 const socket = io('http://localhost:8000');
 const mapDispatchToProps = dispatch => ( bindActionCreators({objmsg}, dispatch) );
 
@@ -38,6 +39,7 @@ export default class Chat extends Component {
         <div>
             <Header />
             <div className="App">
+            <SelectRooms />
                 <div id="Allmsg">
                     {this.state.msgs.map((item, index)=>{
                         return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
