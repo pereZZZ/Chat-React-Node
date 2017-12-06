@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import Header from '../components/Header';
 import {bindActionCreators} from 'redux';
 import {Route, Link} from 'react-router-dom';
 import io from 'socket.io-client';
@@ -32,17 +33,22 @@ export default class Chat extends Component {
 
     render() {
         return (
-            <div className="App">
-                <div id="Allmsg">
-                    {this.state.msgs.map((item, index)=>{
-                        return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
-                        <p className="UserName">User</p><p>at</p><p className="Data">Data</p><hr/>
-                        <p className="Text" key={index}>{item}</p></div></div>
-                    })}
-                </div>
-                <div className="type">
-                    <input type="text" className="msg" ref="msg" defaultValue="" onKeyPress={this.msgon}/>
-                    {/* <button className="msqenter" onClick={this.msgon}>msg</button> */}
+
+            <div>
+              <Header />
+              <div className="App">
+                  <div id="Allmsg">
+                      {this.state.msgs.map((item, index)=>{
+                          return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
+                          <p className="UserName">User</p><p>at</p><p className="Data">Data</p><hr/>
+                          <p className="Text" key={index}>{item}</p></div></div>
+                      })}
+                  </div>
+                  <div className="type">
+                      <input type="text" className="msg" ref="msg" defaultValue="" onKeyPress={this.msgon}/>
+                      {/* <button className="msqenter" onClick={this.msgon}>msg</button> */}
+                  </div>
+
                 </div>
             </div>
         )
