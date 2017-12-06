@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import zzz from './zzz';
+import msg from './msg';
 
 const reducers = combineReducers({
-    zzz
+    // msg
 });
 
 export default reducers;

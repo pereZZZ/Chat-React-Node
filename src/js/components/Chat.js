@@ -15,16 +15,17 @@ export default class Chat extends Component {
     }
 
 
-    msgon = () =>{
-        socket.emit('msgtochat',this.refs.msg.value);
-        this.refs.msg.value="";
+    msgon = (event) =>{
+        if(event.key == 'Enter'){
+            socket.emit('msgtochat',this.refs.msg.value);
+            this.refs.msg.value="";
+        }
     }
 
     componentDidMount(){
         var a;
         socket.on('msgfromchat', (msg) => {
             a=msg;
-            console.log(a);
             this.setState({msgs:[...this.state.msgs, a]})
         });
     }
@@ -33,12 +34,16 @@ export default class Chat extends Component {
         return (
             <div className="App">
                 <div id="Allmsg">
-                    {this.state.msgs.map((item)=>{
-                        return <p>{item}</p>
+                    {this.state.msgs.map((item, index)=>{
+                        return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
+                        <p className="UserName">User</p><p>at</p><p className="Data">Data</p><hr/>
+                        <p className="Text" key={index}>{item}</p></div></div>
                     })}
                 </div>
-                <input type="text" className="msg" ref="msg" defaultValue=""/>
-                <button className="msqenter" onClick={this.msgon}>msg</button>
+                <div className="type">
+                    <input type="text" className="msg" ref="msg" defaultValue="" onKeyPress={this.msgon}/>
+                    {/* <button className="msqenter" onClick={this.msgon}>msg</button> */}
+                </div>
             </div>
         )
     }

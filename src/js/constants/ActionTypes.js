@@ -1,4 +1,1 @@
-export const ZZZ = "ZZZ";
-
-
-
+export const OBJMSG = "OBJMSG";
