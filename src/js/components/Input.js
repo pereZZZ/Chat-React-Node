@@ -15,6 +15,24 @@ export default class Chat extends Component {
     msgon = (event) =>{
         if(event.key == 'Enter'){
             socket.emit('msgtochat',this.refs.msg.value);
+            var b=new Date()
+            var c= b.getDate() + '-' + (b.getMonth() + 1) + '-' + b.getFullYear();
+            fetch('/msgtobd',
+            {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                  },
+                body:JSON.stringify({
+                    msg:this.refs.msg.value, 
+                    date:c
+                })
+            }).then(function(res) {
+                    return res.json();
+                }).then(function(data) {
+                    console.log('Created Gist:');
+                });
             this.refs.msg.value="";
         }
     }

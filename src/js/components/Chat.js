@@ -32,6 +32,7 @@ export default class Chat extends Component {
             c=b.getFullYear() + '-' + (b.getMonth() + 1) + '-' + b.getDate();
             this.setState({date:[...this.state.date, c],
                 msgs:[...this.state.msgs, a]})
+                this.props.objmsg(this.state);
         });
     }
 
@@ -44,9 +45,9 @@ export default class Chat extends Component {
             <div className="App">
                 <div id="Allmsg">
                     {this.state.msgs.map((item, index)=>{
-                        return <div className="OneMsg"><div className="LogoUser"></div><div className="Msg">
+                        return <div key={index}className="OneMsg"><div className="LogoUser"></div><div className="Msg">
                         <p className="UserName">User</p><p>at</p><p className="Data">{this.state.date[index]}</p><hr/>
-                        <p className="Text" key={index}>{item}</p></div></div>
+                        <p className="Text">{item}</p></div></div>
                     })}
                 </div>
                 <div className="type">

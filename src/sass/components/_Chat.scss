@@ -13,6 +13,7 @@ body {
         margin: 0 auto;
     }
 }
+
 form {
     background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; 
 }
@@ -36,37 +37,43 @@ form button {
     height: 530px;
     background: #f5f5f6;
     border:1px #b7b7b7;
+    overflow: hidden;
 
-    .OneMsg{
-        width: 80%;
-        height: 80%;
+    #Allmsg{
+        overflow-y:scroll;
+        width: 700px;
+        height: 100%;
     }
-    .LogoUser{
-        width: 50px;
-        height: 50px;
-        border: 1px solid;
-        border-radius: 50%;
-        float: left;
-    }
-    .Msg{
-        width: 80%;
-        //height: 80%;
-        background: #ffffff;
-        float: left;
-        margin-left:10px;
+        .OneMsg{
+            width: 80%;
+            height: 80%;
+        }
+        .LogoUser{
+            width: 50px;
+            height: 50px;
+            border: 1px solid;
+            border-radius: 50%;
+            float: left;
+        }
+        .Msg{
+            width: 80%;
+            // height: 80%;
+            background: #ffffff;
+            float: left;
+            margin-left:10px;
 
-        p {
-            color: #b7b7b7;
+            p {
+                color: #b7b7b7;
+            }
+            .UserName, .Data, .Text{
+                color: #202b52;
+            }
         }
-        .UserName, .Data, .Text{
-            color: #202b52;
-        }
-    }
 
     .type{
         display: block;
         position: fixed;
-        bottom: 26px;
+        bottom: 180px;
         
         input{
             width: 727px;
