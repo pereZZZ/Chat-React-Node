@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import {bindActionCreators} from 'redux';
 import {Route, Link} from 'react-router-dom';
 import {objmsg} from '../actions';
@@ -53,6 +54,7 @@ export default class Chat extends Component {
                 </div>
                 </div>
                 </div>
+            <Footer />
 
             </div>
         )
