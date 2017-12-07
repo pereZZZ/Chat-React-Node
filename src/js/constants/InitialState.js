@@ -1,3 +1,3 @@
 export default { 
-    msg:[],
+    msg:JSON.parse(localStorage.getItem('msg')) !== null ? JSON.parse(localStorage.getItem('msg')) : false || [],
 };
