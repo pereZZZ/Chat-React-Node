@@ -37,7 +37,7 @@ export default class Chat extends Component {
 
     render() {
         return (
-        <div>
+        <div className='container'>
             <Header />
             <div className="main-chat-wrapper">
             <SelectRooms />
