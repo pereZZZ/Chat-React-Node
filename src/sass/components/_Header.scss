@@ -5,15 +5,16 @@ header{
     padding-top: 18px;
     padding-left: 43px;
     padding-right: 26px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: space-between;
 
     .logo{
+      display: block;
       width: 80px;
       height: 58px;
-      -webkit-background-size: 100%;
-      background-size: 100%;
+      //-webkit-background-size: 100%;
+      //background-size: 100%;
     }
     .profile-block{
       .profile-img{
